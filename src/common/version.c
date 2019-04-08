@@ -62,9 +62,9 @@ const char* GetVersionAsString (void)
 {
     static char Buf[60];
 #if defined(GIT_SHA)
-    xsnprintf (Buf, sizeof (Buf), "%u.%u - Git %s", VER_MAJOR, VER_MINOR, STRINGIZE (GIT_SHA));
+    xsnprintf (Buf, sizeof (Buf), "%u.%u WEAK-WIP-VERSION - Git %s", VER_MAJOR, VER_MINOR, STRINGIZE (GIT_SHA));
 #else
-    xsnprintf (Buf, sizeof (Buf), "%u.%u", VER_MAJOR, VER_MINOR);
+    xsnprintf (Buf, sizeof (Buf), "%u.%u WEAK-WIP-VERSION", VER_MAJOR, VER_MINOR);
 #endif
     return Buf;
 }
