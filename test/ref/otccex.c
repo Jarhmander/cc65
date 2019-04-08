@@ -58,7 +58,8 @@ long fact(n)
 /* Well, we could use printf, but it would be too easy */
 print_num(long n,int b)
 {
-    int tab, p, c;
+    char *tab, *p;
+    int c;
     /* Numbers can be entered in decimal, hexadecimal ('0x' prefix) and
        octal ('0' prefix) */
     /* more complex programs use malloc */
@@ -92,7 +93,8 @@ mymain(int argc,char **argv)
        supported. As long as you do not use a globally defined
        variable name as local variable (which is a bad habbit), you
        won't have any problem */
-    int s, n, f, base;
+    int s, n, base;
+    void *f;
     
     
     /* && and || operator have the same semantics as C (left to right
@@ -141,10 +143,11 @@ help(char *name)
 
 int main(void)
 {
-    char *argv[3];
+    char *argv[4];
     argv[0]="";
     argv[1]="10"; /* n */
     argv[2]="8"; /* base */
+    argv[3]=0;
     mymain(3, argv);
     return 0;
 }

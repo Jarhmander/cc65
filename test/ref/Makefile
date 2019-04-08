@@ -38,7 +38,7 @@ OPTIONS = g O Os Osi Osir Osr Oi Oir Or
 DIFF = $(WORKDIR)$Sbdiff$(EXE)
 
 CC = gcc
-CFLAGS = -O2 -Wall -W -Wextra -funsigned-char -fwrapv -fno-strict-overflow
+CFLAGS = -O2 -Wall -W -Wextra -funsigned-char -fwrapv -fno-strict-overflow -g3
 
 .PHONY: all clean
 
